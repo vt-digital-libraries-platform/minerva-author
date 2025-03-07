@@ -14,7 +14,8 @@ RUN ~/miniconda3/bin/conda config --add channels conda-forge
 # RUN git pull --rebase origin main
 # RUN ~/miniconda3/bin/conda config --remove channels defaults
 RUN bash ~/miniconda3/bin/activate 
-RUN ~/miniconda3/bin/conda env update -n base -f ./minerva-author/requirements.yml
+WORKDIR /home/ubuntu/minerva-author
+RUN ~/miniconda3/bin/conda env update -n base -f requirements.yml
 # RUN ~/miniconda3/bin/conda update --all --solver=classic
 # RUN ~/miniconda3/bin/conda init bash
 RUN chmod +x /home/ubuntu/minerva-author/startup.sh
