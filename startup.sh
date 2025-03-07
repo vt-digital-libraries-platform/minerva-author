@@ -1,2 +1,2 @@
 echo "Starting Minerva Author"
-python ./app.py
+python ./src/app.py
