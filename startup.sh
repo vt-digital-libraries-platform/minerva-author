@@ -1,3 +1,3 @@
 echo "Starting Minerva Author"
-conda init bash
+conda activate base
 python ./src/app.py
