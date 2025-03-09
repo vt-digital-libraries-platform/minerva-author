@@ -81,7 +81,7 @@ tiff_lock = multiprocessing.Lock()
 mask_lock = multiprocessing.Lock()
 
 
-PORT = 2020
+PORT = 8000
 
 FORMATTER = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 
@@ -2027,9 +2027,6 @@ def close_import_pool():
             print(e)
 
 
-def open_browser():
-    webbrowser.open_new("http://127.0.0.1:" + str(PORT) + "/")
-
 G = reset_globals()
 
 if __name__ == "__main__":
@@ -2040,12 +2037,4 @@ if __name__ == "__main__":
 
     sys.stdout.reconfigure(line_buffering=True)
 
-    num_workers = to_num_workers()
-    plural = 's' if num_workers > 1 else ''
-    print(f'Running server with {num_workers} thread{plural}')
-    if "--dev" in sys.argv:
-        open_browser()
-        app.run(debug=False, port=PORT)
-    else:
-        open_browser()
-        serve(app, listen="127.0.0.1:" + str(PORT), threads=num_workers, channel_timeout=15)
+    app.run(debug=False, port=PORT)

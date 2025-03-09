@@ -1,7 +1,7 @@
 FROM --platform=linux/amd64 ubuntu/nginx
 LABEL authors="Lee Hunter <whunter@vt.edu>"
 WORKDIR /home/ubuntu/minerva-author
-EXPOSE 2020
+EXPOSE 8000
 RUN apt update && apt upgrade -y && apt install build-essential git python3-venv wget -y && rm -rf /var/lib/apt/lists/*
 RUN mkdir -p ~/miniconda3
 RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
