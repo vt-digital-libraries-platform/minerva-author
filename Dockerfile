@@ -21,7 +21,7 @@ RUN ~/miniconda3/bin/conda env update -n base -f requirements.yml
 # RUN ~/miniconda3/bin/conda init bash
 COPY . .
 RUN chmod +x /home/ubuntu/minerva-author/startup.sh
-# ENTRYPOINT  ["/home/ubuntu/minerva-author/startup.sh"]
+ENTRYPOINT  ["/home/ubuntu/minerva-author/startup.sh"]
 
 
 # gunicorn-23.0.0
