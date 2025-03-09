@@ -2037,4 +2037,4 @@ if __name__ == "__main__":
 
     sys.stdout.reconfigure(line_buffering=True)
 
-    app.run(debug=False, port=PORT)
+    app.run()
