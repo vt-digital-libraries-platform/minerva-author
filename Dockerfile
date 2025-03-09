@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 ubuntu/nginx
+FROM ubuntu/nginx
 LABEL authors="Lee Hunter <whunter@vt.edu>"
 WORKDIR /home/ubuntu/minerva-author
 EXPOSE 8000
