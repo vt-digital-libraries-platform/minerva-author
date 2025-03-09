@@ -1,4 +1,4 @@
 #!/bin/bash
-echo "Starting Minerva Author"
-# conda activate base
-# python ./src/app.py
+~/miniconda3/bin/conda init bash
+. /root/.bashrc
+python ./src/app.py

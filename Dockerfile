@@ -15,10 +15,11 @@ RUN ~/miniconda3/bin/conda config --add channels conda-forge
 RUN bash ~/miniconda3/bin/activate 
 # WORKDIR /home/ubuntu/minerva-author
 
-COPY . .
+COPY requirements.yml .
 RUN ~/miniconda3/bin/conda env update -n base -f requirements.yml
 # RUN ~/miniconda3/bin/conda update --all --solver=classic
 # RUN ~/miniconda3/bin/conda init bash
+COPY . .
 RUN chmod +x /home/ubuntu/minerva-author/startup.sh
 # ENTRYPOINT  ["/home/ubuntu/minerva-author/startup.sh"]
 
